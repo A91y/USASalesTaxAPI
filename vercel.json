@@ -1,5 +1,4 @@
 {
-    "devCommand": "gunicorn USASalesTaxAPI.wsgi:application --log-file -",
     "builds": [
       {
         "src": "USASalesTaxAPI/wsgi.py",
@@ -11,6 +10,5 @@
         "src": "/(.*)",
         "dest": "USASalesTaxAPI/wsgi.py"
       }
-    ],
-    "installCommand": "pip install -r requirements.txt"
-}
+    ]
+  }
