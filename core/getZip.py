@@ -1,6 +1,5 @@
-from typing import Final, List
+from typing import Final
 from datetime import timedelta
-from dataclasses import dataclass
 from requests_cache import CachedSession
 
 BASE_URL: Final[str] = "https://api.zippopotam.us/us/"
