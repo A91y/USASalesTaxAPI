@@ -11,5 +11,5 @@
         "dest": "USASalesTaxAPI/wsgi.py"
       }
     ],
-    "buildCommand": "python manage.py migrate && python manage.py collectstatic --no-input && gunicorn locallibrary.wsgi:app --log-file -"
+    "buildCommand": "python manage.py migrate && python manage.py collectstatic --no-input && gunicorn USASalesTaxAPI.wsgi:app --log-file -"
   }
