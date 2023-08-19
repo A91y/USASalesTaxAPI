@@ -16,6 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from .views import SalesTaxDataView
 urlpatterns = [
+    path("", SalesTaxDataView.as_view()),   
+    path("<str:zipcode>", SalesTaxDataView.as_view(), name="sales_tax_data"),
+    path("state/<str:state>", SalesTaxDataView.as_view(), name="sales_tax_data_by_state"),
+    path("state/", SalesTaxDataView.as_view(), name="sales_tax_data_by_state_none"),
 ]

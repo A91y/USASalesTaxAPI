@@ -1,8 +1,12 @@
 from bs4 import BeautifulSoup
 import pandas as pd
 from requests_cache import CachedSession
-from getZip import stateName
-from lru_cacher import timed_lru_cache
+try:
+    from getZip import stateName
+    from lru_cacher import timed_lru_cache
+except ImportError:
+    from core.getZip import stateName
+    from core.lru_cacher import timed_lru_cache
 
 session = CachedSession(
     cache_name="cache/salestaxdata_cache", backend="sqlite", expire_after=60*3
