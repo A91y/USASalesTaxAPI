@@ -1,1 +1,1 @@
-web gunicorn USASalesTaxAPI.wsgi:application --log-file -
+web: gunicorn USASalesTaxAPI.wsgi:application --log-file -
