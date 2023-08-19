@@ -7,7 +7,8 @@ def stateName(zipcode: int | str) -> str | None:
     response = requests.get(URL)
     json_response = response.json()
     try:
-        state = json_response["places"][0]["state"]
+        # state = json_response["places"][0]["state"]
+        state = json_response
     except KeyError:
         return None
     return state
